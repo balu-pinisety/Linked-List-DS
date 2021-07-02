@@ -72,20 +72,48 @@ public class LinkedList {
 					temp=temp.next; //Traversing temp to next
 				}
 			}
-			if (bool==1) System.out.println(insertData+" is inserted b/n elements "+prevData+" and "+nextData);
+			if (bool==1) System.out.println("After inserting element "+insertData+" b/n elements "+prevData+" and "+nextData);
 			else System.out.println("Elements "+prevData+" and "+nextData+" are not found in list consequentially");
 		}
+	}
+	
+	/**
+	 * Method to delete element of given position in the sequence
+	 * @param position
+	 */
+	public void pop(int position) {
+		int bool=0;
+		if (position == 1) {
+			head = head.next; //Traversing head to next	
+		} else {
+			Node temp=head;
+			for(int i=0; i<position;i++) {
+				if (temp.next!=null) {
+					temp = temp.next; //Traversing temp to next			
+				} else {
+					System.out.println("Given position '"+position+"' is Out of Bound");
+					bool=1;
+					break;
+				}
+			}
+			if(bool==0) {
+				Node flag = temp.next;
+				temp.next=flag.next;
+			}
+		}
+		if(bool==0) System.out.println("After removing element of position '"+position+"'");
 	}
 	
 	/**
 	 * Printing the Node value by traversing 
 	 */
 	public void print() {
+		System.out.print("The sequence is : ");
 		Node temp = head; //Initializing temp
 		while (temp!=null) {
 			System.out.print(temp.data+" -> "); //Printing data
 			temp=temp.next;//Traversing temp to next
 		}
-		System.out.println();
+		System.out.println("\n");
 	}
 }
