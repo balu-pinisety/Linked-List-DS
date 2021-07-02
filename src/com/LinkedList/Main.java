@@ -16,8 +16,7 @@ public class Main {
 		linkedList.insert(30);
 		linkedList.insert(70);
 		linkedList.print();
-		linkedList.deleteLast();//Deleting last Element
-		linkedList.print();
+		linkedList.searchNode(30);
 	}
 
 }
