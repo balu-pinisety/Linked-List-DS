@@ -46,6 +46,38 @@ public class LinkedList {
 	}
 	
 	/**
+	 * Method to insert data between two elements
+	 * To  insert, it checks for list have min. of two elements or not
+	 * Inserts element b/n two given elements only if they found in consequent position
+	 * @param prevData, insertData, nextData
+	 */
+	public void inMiddle(int prevData, int insertData, int nextData) {
+		int bool=0;
+		//Creating Objectives for the data
+		Node prevNode = new Node(prevData);
+		Node insertNode = new Node(insertData);
+		Node nextNode = new Node(nextData);
+		if (head==null || head.next==null) { //checks for min. of 2 elements
+			System.out.println("List have min. of two elements to insert the elemnt in middle");
+		} else {
+			Node temp = head; //Initializing temp
+			while (temp.next!=null) {
+				if(temp.data==prevNode.data&&temp.next.data==nextNode.data) { //checks for prev data and next data
+					Node flag = temp.next;
+					temp.next = insertNode;
+					insertNode.next=flag;
+					bool=1;
+					break;
+				} else {
+					temp=temp.next; //Traversing temp to next
+				}
+			}
+			if (bool==1) System.out.println(insertData+" is inserted b/n elements "+prevData+" and "+nextData);
+			else System.out.println("Elements "+prevData+" and "+nextData+" are not found in list consequentially");
+		}
+	}
+	
+	/**
 	 * Printing the Node value by traversing 
 	 */
 	public void print() {
@@ -54,5 +86,6 @@ public class LinkedList {
 			System.out.print(temp.data+" -> "); //Printing data
 			temp=temp.next;//Traversing temp to next
 		}
+		System.out.println();
 	}
 }

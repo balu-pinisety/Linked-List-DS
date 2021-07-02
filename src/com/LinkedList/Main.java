@@ -13,8 +13,9 @@ public class Main {
 		LinkedList linkedList = new LinkedList(); //Object
 		//Inserting Elements
 		linkedList.insert(56);
-		linkedList.insert(30); 
 		linkedList.insert(70);
+		linkedList.print();
+		linkedList.inMiddle(56, 30, 70);
 		//Printing elements
 		linkedList.print();
 	}
