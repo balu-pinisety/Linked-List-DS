@@ -14,7 +14,7 @@ public class LinkedList {
 	 */
 	class Node {
 		int data; //Value variable
-		
+		Node next;//Node for next
 		
 		/**
 		 * Constructor for data
@@ -22,17 +22,27 @@ public class LinkedList {
 		 */
 		public Node(int data) {
 			this.data = data;
+			this.next = null;
 		}
 	}
 	
 	/**
 	 * Method to insert data into linked list
+	 * To check if head is null then add data to it
+	 * If not then checks for other nodes for null to add data
 	 * @param data
 	 */
 	public void insert(int data) {
 		Node newNode = new Node(data);
-		head = newNode; //storing data in head
-		System.out.print(head.data+" -> ");//printing elements
+		if (head==null) {
+			head = newNode; //storing data in head
+		} else {
+			Node temp = head; //Initializing temp
+			while (temp.next!=null) {
+				temp=temp.next; //Traversing temp to next
+			}
+			temp.next = newNode;
+		}
 	}
 	
 }
