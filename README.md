@@ -18,3 +18,6 @@ Ability to delete element in given postion from Sequence
 
 # UC6-DeletingLastElement
 Ability to delete element in given postion from Sequence
+
+# UC7-SearchNode
+Ability to search the Node for given Key Value
