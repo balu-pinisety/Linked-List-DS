@@ -45,4 +45,14 @@ public class LinkedList {
 		}
 	}
 	
+	/**
+	 * Printing the Node value by traversing 
+	 */
+	public void print() {
+		Node temp = head; //Initializing temp
+		while (temp!=null) {
+			System.out.print(temp.data+" -> "); //Printing data
+			temp=temp.next;//Traversing temp to next
+		}
+	}
 }
