@@ -202,6 +202,31 @@ public class LinkedList {
 	}
 	
 	/**
+	 * Method to sort the elements by getting data by traversing
+	 */
+	public void sortData() {
+		if (head==null) {
+			System.out.println("Sequence is Empty");
+		} else {
+			Node temp = head; //Initializing temp
+			while(temp!=null) {
+				Node count = temp.next;  //Initializing count
+				while (count!=null) {
+					if (temp.data>count.data) {
+						int var = temp.data;
+						temp.data = count.data;
+						count.data= var;
+					}
+					count = count.next; //Traversing count to next
+				}
+			temp = temp.next; //Traversing temp to next
+			}
+		}
+		System.out.println("After sorting elements");			
+		print();
+	}
+	
+	/**
 	 * Printing the Node value by traversing 
 	 */
 	public void print() {
