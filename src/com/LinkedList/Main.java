@@ -16,8 +16,9 @@ public class Main {
 		linkedList.insert(70);
 		linkedList.print();
 		linkedList.inMiddle(56, 30, 70);
-		//Printing elements
 		linkedList.print();
+		linkedList.pop(1);// Deleting First Element
+		linkedList.print();//Printing Sequence
 	}
 
 }
