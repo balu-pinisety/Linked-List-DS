@@ -79,6 +79,7 @@ public class LinkedList {
 	
 	/**
 	 * Method to delete element of given position in the sequence
+	 * If position is more than Sequence it will Out of  Bound
 	 * @param position
 	 */
 	public void pop(int position) {
@@ -102,6 +103,25 @@ public class LinkedList {
 			}
 		}
 		if(bool==0) System.out.println("After removing element of position '"+position+"'");
+	}
+	
+	/**
+	 * Method to remove last element in the Sequence
+	 */
+	public void deleteLast() {
+		if (head==null) {
+			System.out.println("Sequence have no elements");
+		} else if (head.next==null) {
+			head=null;
+			System.out.println("After deleting last Element, Sequence have no elements");
+		} else {
+			Node lastSecond = head;
+			while(lastSecond.next.next!=null) {
+				lastSecond=lastSecond.next;//Traversing the last Second element
+			}
+			lastSecond.next=null;
+			System.out.println("After deleting last Element");
+		}
 	}
 	
 	/**
