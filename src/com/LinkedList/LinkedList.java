@@ -129,11 +129,12 @@ public class LinkedList {
 	 * If it's there then printing its position
 	 * @param searchData
 	 */
-	public void searchNode(int searchData) {
+	public int searchNode(int searchData) {
 		int flag=0;
 		int count=1;
 		if (head==null) { //checks whether list is empty
 			System.out.println("Sequence have no elements");
+			count=0;
 		} else {
 			Node temp = head; //Initializing temp
 			while (temp.next!=null) {
@@ -146,7 +147,36 @@ public class LinkedList {
 				}
 			}
 			if (flag==1) System.out.println("Element '"+searchData+"' is in the sequence at postion-"+count);
-			else System.out.println("Element '"+searchData+"' is not in the sequence");
+			else {
+				System.out.println("Element '"+searchData+"' is not in the sequence");
+				count=0;
+			}
+		}
+		return count;
+	}
+	
+	/**
+	 * 
+	 * Method to insert data after the element by searching node by key
+	 * Getting the position of search element by calling method
+	 * Using position value, inserting element by traversing the node
+	 * @param prevData, insertData
+	 */
+	public void afterElement(int prevData, int insertData) {
+		Node insertNode = new Node(insertData);
+		int position=searchNode(prevData);
+		if (position>0) {	
+			int i=1;
+			Node temp = head; //Initializing temp
+			while (i<position) {
+				temp=temp.next; //Traversing temp to next
+				i++;
+			}
+			Node flag = temp.next;
+			temp.next = insertNode;
+			insertNode.next=flag;
+			System.out.println("After Inserting the Element "+insertData+" after "+prevData);
+			print();
 		}
 	}
 	
