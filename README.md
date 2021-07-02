@@ -21,3 +21,6 @@ Ability to delete element in given postion from Sequence
 
 # UC7-SearchNode
 Ability to search the Node for given Key Value
+
+# UC8-AfterElement
+Ability to insert element after given element
