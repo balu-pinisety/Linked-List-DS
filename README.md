@@ -15,3 +15,6 @@ Ability to insert 30 between 56 and 70
 
 # UC5-DeletingElementByPosition
 Ability to delete element in given postion from Sequence
+
+# UC6-DeletingLastElement
+Ability to delete element in given postion from Sequence
