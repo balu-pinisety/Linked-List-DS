@@ -16,7 +16,7 @@ public class Main {
 		linkedList.insert(30);
 		linkedList.insert(70);
 		linkedList.print();
-		linkedList.searchNode(30);
+		linkedList.afterElement(30, 40);//Inserting 40 after 30
 	}
 
 }
