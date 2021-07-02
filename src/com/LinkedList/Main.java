@@ -13,12 +13,11 @@ public class Main {
 		LinkedList linkedList = new LinkedList(); //Object
 		//Inserting Elements
 		linkedList.insert(56);
+		linkedList.insert(30);
 		linkedList.insert(70);
 		linkedList.print();
-		linkedList.inMiddle(56, 30, 70);
+		linkedList.deleteLast();//Deleting last Element
 		linkedList.print();
-		linkedList.pop(1);// Deleting First Element
-		linkedList.print();//Printing Sequence
 	}
 
 }
