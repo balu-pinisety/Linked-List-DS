@@ -12,3 +12,6 @@ After appending 56 and 30 to 70 and Printing the elements of linked List.
 
 # UC4-InsertBetween
 Ability to insert 30 between 56 and 70
+
+# UC5-DeletingElementByPosition
+Ability to delete element in given postion from Sequence
