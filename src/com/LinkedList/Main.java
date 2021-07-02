@@ -17,7 +17,7 @@ public class Main {
 		linkedList.insert(70);
 		linkedList.print();
 		linkedList.afterElement(30, 40);//Inserting 40 after 30
-		linkedList.deleteElement(40); //deleting 40
+		linkedList.sortData(); //Sorting elements
 	}
 
 }
