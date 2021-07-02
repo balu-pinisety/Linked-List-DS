@@ -24,3 +24,6 @@ Ability to search the Node for given Key Value
 
 # UC8-AfterElement
 Ability to insert element after given element
+
+# UC9-DeleteElement
+Ability to delete the given element
