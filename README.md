@@ -27,3 +27,6 @@ Ability to insert element after given element
 
 # UC9-DeleteElement
 Ability to delete the given element
+
+# UC10-SortElements
+Ability to sort the elements in the sequence
