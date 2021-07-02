@@ -53,7 +53,7 @@ public class LinkedList {
 	 */
 	public void inMiddle(int prevData, int insertData, int nextData) {
 		int bool=0;
-		//Creating Objectives for the data
+		//Creating Objects for the data
 		Node prevNode = new Node(prevData);
 		Node insertNode = new Node(insertData);
 		Node nextNode = new Node(nextData);
@@ -121,6 +121,32 @@ public class LinkedList {
 			}
 			lastSecond.next=null;
 			System.out.println("After deleting last Element");
+		}
+	}
+	
+	/**
+	 * Method to check whether given element is present in Sequence or not
+	 * If it's there then printing its position
+	 * @param searchData
+	 */
+	public void searchNode(int searchData) {
+		int flag=0;
+		int count=1;
+		if (head==null) { //checks whether list is empty
+			System.out.println("Sequence have no elements");
+		} else {
+			Node temp = head; //Initializing temp
+			while (temp.next!=null) {
+				if(temp.data==searchData) { //Searching for the key
+					flag=1;
+					break;
+				} else {
+					count++;
+					temp=temp.next; //Traversing temp to next
+				}
+			}
+			if (flag==1) System.out.println("Element '"+searchData+"' is in the sequence at postion-"+count);
+			else System.out.println("Element '"+searchData+"' is not in the sequence");
 		}
 	}
 	
