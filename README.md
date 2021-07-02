@@ -8,4 +8,7 @@ Creating and Printing the Simple Linked List of data 56, 30 and 70.
 Creating Linked List by adding 56 and 30 to 70.
 
 # UC3-AppendingElement
-After appnding 56 and 30 to 70 and Printing the elements of linked List.
+After appending 56 and 30 to 70 and Printing the elements of linked List.
+
+# UC4-InsertBetween
+Ability to insert 30 between 56 and 70
