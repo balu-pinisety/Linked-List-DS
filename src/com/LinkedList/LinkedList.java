@@ -155,8 +155,7 @@ public class LinkedList {
 		return count;
 	}
 	
-	/**
-	 * 
+	/** 
 	 * Method to insert data after the element by searching node by key
 	 * Getting the position of search element by calling method
 	 * Using position value, inserting element by traversing the node
@@ -176,6 +175,28 @@ public class LinkedList {
 			temp.next = insertNode;
 			insertNode.next=flag;
 			System.out.println("After Inserting the Element "+insertData+" after "+prevData);
+			print();
+		}
+	}
+	
+	/** 
+	 * Method to delete the element by searching node by key
+	 * Getting the position of search element by calling method
+	 * Using position value, deleting element by traversing the node
+	 * @param deletedData
+	 */
+	public void deleteElement(int deletedData) {
+		int position=searchNode(deletedData);
+		if (position>0) {	
+			int i=1;
+			Node temp = head; //Initializing temp
+			while (i<position-1) {
+				temp=temp.next; //Traversing temp to next
+				i++;
+			}
+			Node flag = temp.next;
+			temp.next=flag.next;
+			System.out.println("After deleting element "+deletedData);			
 			print();
 		}
 	}
